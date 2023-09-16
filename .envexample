@@ -1,3 +1,3 @@
 PORT=3000
 NODE_ENV=PRODUCTION
-POSTGRESQL_DB_URI='postgres://nishantbabu0007:gMEbosJ39Oyf@ep-orange-hat-65741999.ap-southeast-1.aws.neon.tech/neondb?sslmode=require'
+POSTGRESQL_DB_URI=
