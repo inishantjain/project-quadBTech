@@ -19,7 +19,19 @@ const app: Application = express();
   }
 });*/
 
-app.use(express.static("public"));
+app.use(
+  express.static("public", {
+    setHeaders: (res, path) => {
+      if (path.endsWith(".html")) {
+        res.setHeader("Content-Type", "text/html");
+      } else if (path.endsWith(".css")) {
+        res.setHeader("Content-Type", "text/css");
+      } else if (path.endsWith(".js")) {
+        res.setHeader("Content-Type", "application/javascript");
+      }
+    },
+  })
+);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to the api");
