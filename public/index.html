@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodlinfo Project</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container top-banner-container flex">
+        <img width="300" src="./assets/banner.png" class="fiat-logo" style="padding: 10px" />
+        <div class="flex top-btn-group"><button>INR</button><button>BTC</button><button>BUY BTC</button></div>
+        <div class="flex telegram-night-btn-container">
+          <div id="timer">25</div>
+          <a class="connect-telegram-button">Connect Telegram</a>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="container">
+        <div class="stats-figures flex">
+          <div class="side-figures">0.35%<span>5 mins</span></div>
+          <div class="side-figures">1.38%<span>1 hr</span></div>
+          <div class="flex curr-price-container">
+            <h3 class="best-price-h3">Best Price to Trade</h3>
+            <div class="curr-price">₹123,456</div>
+            <h4 class="avg-price-h4">Average BTC/INR price including commission.</h4>
+          </div>
+          <div class="side-figures">6.55%<span>1 hr</span></div>
+          <div class="side-figures">8.85%<span>1 hr</span></div>
+        </div>
+      </div>
+
+      <!-- table -->
+      <div class="container table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Last Traded Price</th>
+              <th>Buy / Sell Price</th>
+              <th>Volume</th>
+              <th>Base Unit</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
